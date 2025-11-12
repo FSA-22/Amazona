@@ -130,6 +130,25 @@
   }
 }
 
+@layer utilities {
+  .header-button {
+    @apply rounded-lg hover:bg-gray-100 active:scale-95 transition cursor-pointer p-1 border-transparent;
+  }
+  .bg-linear-to-br {
+    background-image: linear-gradient(
+      to bottom right,
+      var(--tw-gradient-stops)
+    );
+  }
+
+  .bg-linear-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+  .h1-bold {
+    @apply text-2xl lg:text-3xl font-bold;
+  }
+}
+
 @layer components {
   .btn-primary {
     @apply bg-gradient-right text-white h-15 w-40 text-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0.5 rounded-2xl py-4 px-6 font-semibold hover:bg-gray-100;
