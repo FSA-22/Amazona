@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Amazona',
   description:
-    'Amazona is an e-commerce web application built with Next.js and TypeScript.',
+    'Amazona is an e-commerce web application built with Next.js, TypeScript, Tailwind, Nodejs, MongoDB/Mongoose.',
 };
 
 export default function RootLayout({
