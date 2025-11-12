@@ -1,7 +1,16 @@
 @import 'tailwindcss';
-@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-secondary: #0052cc;
+
+  --color-primary: #193678;
+  --color-borderwhite: #e5e7eb;
+  --color-footerbg: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+
+  --font-display: 'Roboto', Arial, sans-serif;
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -119,4 +128,39 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-right text-white h-15 w-40 text-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0.5 rounded-2xl py-4 px-6 font-semibold hover:bg-gray-100;
+  }
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@utility bg-gradient-light {
+  @apply bg-linear-to-br from-[#a4beff] to-blue-50 h-[700px] flex items-center;
+}
+
+@utility text-gradient {
+  @apply bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent;
+}
+
+@utility bg-gradient-right {
+  @apply bg-linear-to-r  from-primary to-secondary;
+}
+
+@utility text-gradient-right {
+  background: linear-gradient(to right, #011e46, #267898);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility primary-button {
+  @apply bg-gradient-right text-white h-15 w-40 text-lg transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0.5 rounded-2xl py-4 px-6 font-semibold hover:bg-gray-100;
+}
+@utility header {
+  @apply sticky top-0 left-0 z-50 right-0 bg-white/80 backdrop-blur-md border-t border-r border-l border-4 border-gray-100;
 }
